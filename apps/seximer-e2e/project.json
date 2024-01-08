@@ -1,0 +1,30 @@
+{
+  "name": "seximer-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/seximer-e2e/src",
+  "targets": {
+    "e2e": {
+      "executor": "@nx/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/seximer-e2e/cypress.config.ts",
+        "testingType": "e2e",
+        "devServerTarget": "seximer:serve:development"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "seximer:serve:production"
+        },
+        "ci": {
+          "devServerTarget": "seximer:serve-static"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"]
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["seximer"]
+}
