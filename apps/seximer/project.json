@@ -2,7 +2,7 @@
   "name": "seximer",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
-  "prefix": "seximer",
+  "prefix": "app",
   "sourceRoot": "apps/seximer/src",
   "tags": [],
   "targets": {

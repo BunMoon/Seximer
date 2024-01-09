@@ -1,1 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('normalize.css');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #101010;
+  color: #fff;
+}
